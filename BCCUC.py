@@ -246,19 +246,6 @@ mdb.models['MyModel-1'].parts['BCCUC'].projectReferencesOntoSketch(filter=
     COPLANAR_EDGES, sketch=mdb.models['MyModel-1'].sketches['__profile__'])
 del mdb.models['MyModel-1'].sketches['__profile__']
 
-from part import *
-from material import *
-from section import *
-from assembly import *
-from step import *
-from interaction import *
-from load import *
-from mesh import *
-from optimization import *
-from job import *
-from sketch import *
-from visualization import *
-from connectorBehavior import *
 mdb.models['MyModel-1'].rootAssembly.regenerate()
 mdb.models['MyModel-1'].rootAssembly.DatumPlaneByThreePoints(point1=
     mdb.models['MyModel-1'].rootAssembly.instances['BCCUC-1'].vertices[29], 
@@ -547,19 +534,6 @@ mdb.models['MyModel-1'].parts['BCCUC'].deleteFeatures(('Datum plane-10',
 mdb.models['MyModel-1'].parts['BCCUC'].deleteFeatures(('Datum plane-11', 
     'Partition cell-4'))
 
-from part import *
-from material import *
-from section import *
-from assembly import *
-from step import *
-from interaction import *
-from load import *
-from mesh import *
-from optimization import *
-from job import *
-from sketch import *
-from visualization import *
-from connectorBehavior import *
 mdb.models['MyModel-1'].parts['BCCUC'].DatumPlaneByThreePoints(point1=
     mdb.models['MyModel-1'].parts['BCCUC'].vertices[23], point2=
     mdb.models['MyModel-1'].parts['BCCUC'].InterestingPoint(
@@ -601,19 +575,7 @@ mdb.models['MyModel-1'].parts['BCCUC'].deleteFeatures(('Datum plane-8',
 mdb.models['MyModel-1'].parts['BCCUC'].deleteFeatures(('Datum plane-9', 
     'Partition cell-2'))
 
-from part import *
-from material import *
-from section import *
-from assembly import *
-from step import *
-from interaction import *
-from load import *
-from mesh import *
-from optimization import *
-from job import *
-from sketch import *
-from visualization import *
-from connectorBehavior import *
+
 mdb.models['MyModel-1'].rootAssembly.regenerate()
 mdb.models['MyModel-1'].parts['BCCUC'].PartitionCellByPlaneThreePoints(cells=
     mdb.models['MyModel-1'].parts['BCCUC'].cells.getSequenceFromMask(('[#1 ]', 
@@ -731,12 +693,7 @@ mdb.models['MyModel-1'].parts['BCCUC'].PartitionCellByDatumPlane(cells=
     '[#ffffffff #ff ]', ), ), datumPlane=
     mdb.models['MyModel-1'].parts['BCCUC'].datums[102])
 mdb.models['MyModel-1'].parts['BCCUC'].seedPart(deviationFactor=0.1, 
-    minSizeFactor=0.1, size=0.43)
-mdb.models['MyModel-1'].parts['BCCUC'].generateMesh()
-mdb.models['MyModel-1'].parts['BCCUC'].deleteMesh()
-mdb.models['MyModel-1'].parts['BCCUC'].seedPart(deviationFactor=0.1, 
     minSizeFactor=0.1, size=0.2)
-mdb.models['MyModel-1'].parts['BCCUC'].seedPart(deviationFactor=0.1, 
-    minSizeFactor=0.1, size=0.1)
 mdb.models['MyModel-1'].parts['BCCUC'].generateMesh()
+
 
